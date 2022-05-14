@@ -1,0 +1,55 @@
+
+@font-face {
+    font-family: neon;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+.homepage {
+    display: flex;
+
+    flex: 1;
+    background-color: hsl(233, 47%, 13%);
+    height: 100vh;
+}
+
+.container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+.flux {
+    font-family: neon;
+    color: #426DFB;
+    font-size: 4vw;
+    line-height: 3vw;
+    text-shadow: 0 0 3vw #0f3fda;
+}
+
+.flux {
+    animation: flux 1s ease infinite;
+    -moz-animation: flux 1s ease infinite;
+    -webkit-animation: flux 1s ease infinite;
+}
+
+
+
+
+@keyframes flux {
+
+    0%,
+    100% {
+        text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+        color: #28D7FE;
+    }
+
+    50% {
+        text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+        color: #146C80;
+    }
+}
+
+
+
+
