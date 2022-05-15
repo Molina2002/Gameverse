@@ -6,7 +6,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 import { useHistory } from "react-router-dom";
-
+import './Login.css'
 const Login = () => {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
@@ -97,20 +97,25 @@ const Login = () => {
             type={show ? "text" : "password"}
             placeholder="Enter password"
             color="White"
+            size='lg'
+           
+            width='350px'
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
+            <Button h="1.75rem" size="sm" onClick={handleClick} >
               {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
         </InputGroup>
       </FormControl>
       <Button
-        colorScheme="blue"
+       className="btn-grad"
+      colorScheme="linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);"
         width="100%"
         style={{ marginTop: 15 }}
         onClick={submitHandler}
         isLoading={loading}
+       
       >
         Login
       </Button>

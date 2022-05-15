@@ -1,7 +1,7 @@
 import { Button } from "@chakra-ui/button";
 import { useDisclosure } from "@chakra-ui/hooks";
 import { Input } from "@chakra-ui/input";
-import { Box, Text } from "@chakra-ui/layout";
+import { Box, Text,HStack } from "@chakra-ui/layout";
 import './SideDrawer.css'
 import {
   Menu,
@@ -136,14 +136,17 @@ function SideDrawer() {
         d="flex"
         justifyContent="space-between"
         alignItems="center"
-        bg="#090B1A"
+        backgroundColor="hsl(233, 47%, 13%);"
         w="100%"
         p="10px 20px"
-        borderWidth="5px"
       >
-        <Text fontSize="2xl" fontFamily="Work sans" padding="0px 20px" color="blue"> 
-           GameVerse
-         </Text>
+         <Text fontSize="xl" padding="0px 40px 0px 0px" >
+           
+  
+  <div class="fl">GameVerse</div>
+          
+        
+        </Text>
         {/* <Tooltip label="Search Users to chat" hasArrow placement="bottom-end" color="black">  */}
           <Button  onClick={onOpen} colorScheme="black" variant="solid"  border='2px'
   borderColor='navy'>
@@ -195,19 +198,23 @@ function SideDrawer() {
               ))}
             </MenuList>
           </Menu>
-          <Menu>
-            <MenuButton as={Button} bg="white" rightIcon={<ChevronDownIcon />}>
+           <Menu>
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}  colorScheme="linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);">
+              <HStack>
               <Avatar
                 size="sm"
                 cursor="pointer"
-                name={user.name}
-                src={user.pic}
+                name={user?.name}
+                src={user?.pic}
               />
-              {user.name}
+              <Box>
+              {user?.name}
+              </Box>
+              </HStack>
             </MenuButton>
-            <MenuList>
+            <MenuList colorScheme="black">
               <ProfileModal user={user}>
-                <MenuItem>My Profile</MenuItem>{" "}
+                <MenuItem colorScheme="black">My Profile</MenuItem>{" "}
               </ProfileModal>
               <MenuDivider />
               <MenuItem onClick={logoutHandler}>Logout</MenuItem>
@@ -216,17 +223,18 @@ function SideDrawer() {
         </div>
       </Box>
 
-      <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
+      <Drawer placement="left" onClose={onClose} isOpen={isOpen} backgroundColor="black">
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader borderBottomWidth="1px">Search Users</DrawerHeader>
-          <DrawerBody>
+          <DrawerHeader borderBottomWidth="1px" color="white" backgroundColor="black">Search Users</DrawerHeader>
+          <DrawerBody backgroundColor="black">
             <Box d="flex" pb={2} color="black">
               <Input
                 placeholder="Search by name or email"
                 mr={2}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
+                color="white"
               />
               <Button onClick={handleSearch}>Go</Button>
             </Box>

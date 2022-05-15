@@ -171,6 +171,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             d="flex"
             justifyContent={{ base: "space-between" }}
             alignItems="center"
+            color="white"
           >
             <IconButton
               d={{ base: "flex", md: "none" }}
@@ -201,7 +202,10 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             flexDir="column"
             justifyContent="flex-end"
             p={3}
-            bg="#E8E8E8"
+           // bg="linear-gradient(to right, #1a2980, #26d0ce)" // background of chat
+           backgroundColor= "black"
+//backgroundImage= 'linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);'
+
             w="100%"
             h="100%"
             borderRadius="lg"
@@ -241,7 +245,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
               )}
               <Input
                 variant="filled"
-                bg="#E0E0E0"
+                bg="#000055"
+                color="white"
                 placeholder="Enter a message.."
                 value={newMessage}
                 onChange={typingHandler}

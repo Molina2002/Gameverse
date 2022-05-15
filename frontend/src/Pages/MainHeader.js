@@ -15,6 +15,7 @@ import { BellIcon, ChevronDownIcon,SearchIcon } from "@chakra-ui/icons";
 import { MdNotifications, MdArrowDropDown, MdSearch } from "react-icons/md";
 import { Avatar } from '@material-ui/core';
 import { useHistory } from "react-router-dom";
+import { HStack,Box } from '@chakra-ui/react';
 function MainHeader() {
     const {user} = ChatState();
   const history = useHistory();
@@ -34,18 +35,22 @@ function MainHeader() {
       <div className="chatHeader__right">
         <div className="sidebar__profile">
           <Menu>
-            <MenuButton as={Button} bg="white" rightIcon={<ChevronDownIcon />}>
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}  colorScheme="linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);">
+              <HStack>
               <Avatar
                 size="sm"
                 cursor="pointer"
                 name={user?.name}
                 src={user?.pic}
               />
+              <Box>
               {user?.name}
+              </Box>
+              </HStack>
             </MenuButton>
-            <MenuList>
+            <MenuList colorScheme="black">
               <ProfileModal user={user}>
-                <MenuItem>My Profile</MenuItem>{" "}
+                <MenuItem colorScheme="black">My Profile</MenuItem>{" "}
               </ProfileModal>
               <MenuDivider />
               <MenuItem onClick={logoutHandler}>Logout</MenuItem>

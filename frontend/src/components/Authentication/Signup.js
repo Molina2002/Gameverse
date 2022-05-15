@@ -41,6 +41,7 @@ const Signup = () => {
         isClosable: true,
         position: "bottom",
       });
+       setPicLoading(false);
       return;
     }
     console.log(name, email, password, pic);
@@ -149,6 +150,7 @@ const Signup = () => {
           placeholder="Enter Your Name"
           color ="white"
           onChange={(e) => setName(e.target.value)}
+          width='340px'
         />
       </FormControl>
       <FormControl id="email" isRequired>
@@ -197,11 +199,12 @@ const Signup = () => {
      
 
       <Button
-        colorScheme="blue"
+         colorScheme="linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);"
         width="100%"
         style={{ marginTop: 15 }}
         onClick={submitHandler}
         isLoading={picLoading}
+        className="btn-grad "
       >
         Sign Up
       </Button>

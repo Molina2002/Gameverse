@@ -51,15 +51,17 @@ const MyChats = ({ fetchAgain }) => {
       flexDir="column"
       alignItems="center"
       p={3}
-      bg="white"
+      bg= "linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);"//"#154c79"//"hsl(233, 47%, 13%);"
       w={{ base: "100%", md: "31%" }}
       borderRadius="lg"
-      borderWidth="1px"
+      // borderWidth="1px"
+      // borderColor="blue"
     >
       <Box
         pb={3}
         px={3}
         fontSize={{ base: "28px", md: "30px" }}
+        color="white"
         fontFamily="Work sans"
         d="flex"
         w="100%"
@@ -67,11 +69,13 @@ const MyChats = ({ fetchAgain }) => {
         alignItems="center"
       >
         My Chats
+      
         <GroupChatModal>
           <Button
             d="flex"
             fontSize={{ base: "17px", md: "10px", lg: "17px" }}
             rightIcon={<AddIcon />}
+            bg="black"
           >
             New Group Chat
           </Button>
@@ -81,7 +85,7 @@ const MyChats = ({ fetchAgain }) => {
         d="flex"
         flexDir="column"
         p={3}
-        bg="#F8F8F8"
+        bg="black"
         w="100%"
         h="100%"
         borderRadius="lg"
@@ -93,17 +97,17 @@ const MyChats = ({ fetchAgain }) => {
               <Box
                 onClick={() => setSelectedChat(chat)}
                 cursor="pointer"
-                bg={selectedChat === chat ? "#38B2AC" : "#E8E8E8"}
-                color={selectedChat === chat ? "white" : "black"}
+                bg={selectedChat === chat ? "#1877F2" : "#303030"}
+                color={selectedChat === chat ? "white" : "white"}
                 px={3}
                 py={2}
                 borderRadius="lg"
-                key={chat._id}
+                key={chat?._id}
               >
                 <Text>
-                  {!chat.isGroupChat
+                  {!chat?.isGroupChat
                     ? getSender(loggedUser, chat.users)
-                    : chat.chatName}
+                    : chat?.chatName}
                 </Text>
                 {chat.latestMessage && (
                   <Text fontSize="xs">

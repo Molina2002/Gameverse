@@ -12,10 +12,11 @@ const Chatbox = ({ fetchAgain, setFetchAgain }) => {
       alignItems="center"
       flexDir="column"
       p={3}
-      bg="white"
+      bg= "linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);"//"#202020"//hsl(233, 47%, 7%);"
       w={{ base: "100%", md: "68%" }}
       borderRadius="lg"
-      borderWidth="1px"
+      // borderWidth="1px"
+      // borderColor="blue"
     >
       <SingleChat fetchAgain={fetchAgain} setFetchAgain={setFetchAgain} />
     </Box>

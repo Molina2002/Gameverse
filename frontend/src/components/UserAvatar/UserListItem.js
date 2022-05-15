@@ -8,15 +8,16 @@ const UserListItem = ({ user, handleFunction }) => {
     <Box
       onClick={handleFunction}
       cursor="pointer"
-      bg="#E8E8E8"
+      bg="#303030"//"linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);"//"#E8E8E8"
+     
       _hover={{
-        background: "#38B2AC",
+        background: "rgb(24, 119, 242)",
         color: "white",
       }}
       w="100%"
       d="flex"
       alignItems="center"
-      color="black"
+      color="white"
       px={3}
       py={2}
       mb={2}
@@ -26,14 +27,14 @@ const UserListItem = ({ user, handleFunction }) => {
         mr={2}
         size="sm"
         cursor="pointer"
-        name={user.name}
-        src={user.pic}
+        name={user?.name}
+        src={user?.pic}
       />
       <Box>
-        <Text>{user.name}</Text>
+        <Text>{user?.name}</Text>
         <Text fontSize="xs">
           <b>Email : </b>
-          {user.email}
+          {user?.email}
         </Text>
       </Box>
     </Box>

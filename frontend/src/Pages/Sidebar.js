@@ -6,6 +6,7 @@ import { BiUser } from "react-icons/bi";
 import { IoLogoGameControllerB } from "react-icons/io";
 import { keyframes } from 'styled-components';
 import { useHistory, Link } from 'react-router-dom';
+import {Text} from "@chakra-ui/react";
 function Sidebar() {
    const [user, setUser] = useState([]);
    const history = useHistory();
@@ -17,7 +18,13 @@ function Sidebar() {
   return (
     <div className='sidebar'>
         <div className="sidebar__top">
-            <h2>GameVerse</h2>
+             <Text fontSize="xl" >
+           
+  
+  <div class="fl">GameVerse</div>
+          
+        
+        </Text>
         </div>
         <div className="sidebar__icon__container">
           <div className="sidebar__icon">
