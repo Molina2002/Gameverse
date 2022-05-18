@@ -7,7 +7,7 @@ border: '1px solid black',
 height:'787px',
  overflow:' hidden',
 position:'relative',
-width: '450px',
+width: '530px',
 
 
 }
@@ -31,7 +31,7 @@ const ifm2={
     width: '1270px',
 }
   return (
-<>
+<div style={{width:'100vw', backgroundColor: 'hsl(233, 47%, 13%)'}}>
 <HStack spacing="0px">
       <div style={divStyle}>
       <iframe src="/vchat" style={ifm}></iframe>
@@ -40,7 +40,7 @@ const ifm2={
         <iframe src="https://harsh021102.github.io/project-youtube/" scrolling="no" style={ifm2}></iframe>
     </div>
     </HStack>
-    </>
+    </div>
   )  
 }
 

@@ -3,6 +3,7 @@ import './MainCard.css'
 function MainCard() {
   return (
     <div class="container">
+      <a href="/chess">
       <div class="card">
         <div class="text-section">
           <div class="content">
@@ -12,6 +13,7 @@ function MainCard() {
       </div>
         <div class="image-section image"></div>
     </div>
+    </a>
     </div>
   )
 }

@@ -30,7 +30,7 @@ const ifm2={
     width: '1200px',
 }
   return (
-    <>
+    <div style={{width:'100vw', backgroundColor: 'hsl(233, 47%, 13%)'}}>
 <HStack spacing="0px">
       <div style={divStyle}>
       <iframe src="/vchat" style={ifm}></iframe>
@@ -39,7 +39,7 @@ const ifm2={
         <iframe src="https://www.chessmultiplayer.com/" scrolling="no" style={ifm2}></iframe>
     </div>
     </HStack>
-    </>
+    </div>
   )
 }
 
