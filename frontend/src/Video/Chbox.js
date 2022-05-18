@@ -3,7 +3,7 @@ import "./styles.css";
 import SingleChat from "./SingleChat";
 import { ChatState } from "../Context/ChatProvider";
 
-const Chatbox = ({ fetchAgain, setFetchAgain }) => {
+const Chbox = ({ fetchAgain, setFetchAgain }) => {
   const { selectedChat } = ChatState();
 
   return (
@@ -13,7 +13,7 @@ const Chatbox = ({ fetchAgain, setFetchAgain }) => {
       flexDir="column"
       p={3}
       bg="linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);"
-      w={{ base: "100%", md: "68%" }}
+      w={{ base: "30%", md: "30%" }}
       borderRadius="lg"
       borderWidth="1px"
     >
@@ -22,4 +22,4 @@ const Chatbox = ({ fetchAgain, setFetchAgain }) => {
   );
 };
 
-export default Chatbox;
+export default Chbox;

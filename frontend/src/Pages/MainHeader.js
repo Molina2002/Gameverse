@@ -35,7 +35,7 @@ function MainHeader() {
       <div className="chatHeader__right">
         <div className="sidebar__profile">
           <Menu>
-            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}  colorScheme="linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);">
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />} colorScheme="hsl(233, 47%, 20%)" p={6} border='3px solid hsl(244, 38%, 16%)'>
               <HStack>
               <Avatar
                 size="sm"
@@ -48,7 +48,7 @@ function MainHeader() {
               </Box>
               </HStack>
             </MenuButton>
-            <MenuList colorScheme="black">
+            <MenuList colorScheme="black" >
               <ProfileModal user={user}>
                 <MenuItem colorScheme="black">My Profile</MenuItem>{" "}
               </ProfileModal>
@@ -61,67 +61,5 @@ function MainHeader() {
     </div>
   )
 }
-const Profile = styled.button`
-  /* padding: 10px; */
-  padding: 0 10px;
-  border-radius: 10em;
-  background: hsl(233, 47%, 13%);
-  display: flex;
-  justify-content: center;
-  color: hsla(0, 0%, 100%, 0.75);
-  align-items: center;
-  gap: 0.8rem;
-  border: 3px solid hsl(244, 38%, 16%);
-  box-shadow: 2px 2px 2px #00000080,
-                10px 10px 12px #00000080,
-                inset 2px 2px 12px #00000080,
-                inset 2px 2px 12px #00000080,
-                inset 2px 2px 12px #00000080,
-                inset 2px 2px 12px #00000080;
-  &:hover{
-    /* border-radius: 10px; */
-    /* transform: scale(1.1); */
-    background-color: hsl(233, 47%, 19%);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    color: hsl(0, 0%, 100%);
-  }
-`
-const Search = styled(MdSearch)`
-  padding: 5px;
-  cursor: pointer;
-`
-const NotiButton = styled.button`
-  padding: 10px;
-  border-radius: 50px;
-  background: hsl(233, 47%, 10%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: hsla(0, 0%, 100%, 0.75);
-  border: 3px solid hsl(244, 38%, 16%);
-  box-shadow: 2px 2px 2px #00000080,
-                10px 10px 12px #00000080,
-                inset 2px 2px 12px #00000080,
-                inset 2px 2px 12px #00000080,
-                inset 2px 2px 12px #00000080,
-                inset 2px 2px 12px #00000080;
-  &:hover{
-    background-color: hsl(233, 47%, 19%);
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-    color: hsl(0, 0%, 100%);
-  }
-`
-const Notifications = styled(MdNotifications)`
-  /* color: white; */
-`
-const ProAvatar = styled(Avatar)`
-  &:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-  }
-`
+
 export default MainHeader

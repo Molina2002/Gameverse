@@ -4,8 +4,8 @@ import { useToast } from "@chakra-ui/toast";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { getSender } from "../config/ChatLogics";
-import ChatLoading from "./ChatLoading";
-import GroupChatModal from "./miscellaneous/GroupChatModal";
+import ChatLoading from "../components/ChatLoading";
+import GroupChatModal from "../components/miscellaneous/GroupChatModal";
 import { Button } from "@chakra-ui/react";
 import { ChatState } from "../Context/ChatProvider";
 
@@ -47,14 +47,15 @@ const MyChats = ({ fetchAgain }) => {
 
   return (
     <Box
-      d={{ base: selectedChat ? "none" : "flex",md:'flex' }}
+      d={{ md: selectedChat ? "none" : "flex" }}
       flexDir="column"
       alignItems="center"
       p={3}
-      bg="linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);"
+     
       w={{ base: "31%", md: "31%" }}
       borderRadius="lg"
       borderWidth="1px"
+      bg="linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);"
     >
       <Box
         pb={3}
@@ -66,7 +67,7 @@ const MyChats = ({ fetchAgain }) => {
         justifyContent="space-between"
         alignItems="center"
         backgroundColor="linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);"
-        color ="white"
+        color="white"
       >
         My Chats
         <GroupChatModal>
@@ -74,8 +75,7 @@ const MyChats = ({ fetchAgain }) => {
             d="flex"
             fontSize={{ base: "17px", md: "10px", lg: "17px" }}
             rightIcon={<AddIcon />}
-            color="white"
-            bg="black"
+            backgroundColor="black"
           >
             New Group Chat
           </Button>
@@ -97,13 +97,12 @@ const MyChats = ({ fetchAgain }) => {
               <Box
                 onClick={() => setSelectedChat(chat)}
                 cursor="pointer"
-                bg={selectedChat === chat ?  "#1877F2" : "#303030"}
+                 bg={selectedChat === chat ?  "#1877F2" : "#303030"}
                color="white"
                 px={3}
                 py={2}
                 borderRadius="lg"
                 key={chat._id}
-               
               >
                 <Text>
                   {!chat.isGroupChat

@@ -130,8 +130,6 @@ function SideDrawer() {
 
   return (
     <>
-
-     
       <Box
         d="flex"
         justifyContent="space-between"
@@ -140,13 +138,13 @@ function SideDrawer() {
         w="100%"
         p="10px 20px"
       >
-         <Text fontSize="xl" padding="0px 40px 0px 0px" >
+         <a href="/dashboard"><Text fontSize="xl" padding="0px 40px 0px 0px" >
            
   
   <div class="fl">GameVerse</div>
           
         
-        </Text>
+        </Text></a>
         {/* <Tooltip label="Search Users to chat" hasArrow placement="bottom-end" color="black">  */}
           <Button  onClick={onOpen} colorScheme="black" variant="solid"  border='2px'
   borderColor='navy'>
@@ -162,13 +160,11 @@ function SideDrawer() {
         <div className="sidebar__icon__container">
           <div className="sidebar__ic">
            <Link to="/dashboard"><GameButton><GamepadAnimation size="35" /></GameButton></Link>
-            <UserButton>
-              <UserAlt size="29"/>
-              </UserButton>
-            <ChatButton><ChatBubble size='30'/></ChatButton>
+           
+            <Link to="/chats"><ChatButton><ChatBubble size='30'/></ChatButton></Link>
     
-            <StreamButton><Stream size='30'/></StreamButton>
-            <MusicButton><Music size='30'/></MusicButton>
+            <Link to="/vstream"><StreamButton><Stream size='30'/></StreamButton></Link>
+         
           </div>
         </div>
 
@@ -258,15 +254,9 @@ function SideDrawer() {
   );
 }
 const GamepadAnimation = styled(IoLogoGameControllerB)`
-    /* from{
-        filter: hue-rotate(0deg);
-    }
-    to{
-        filter: hue-rotate(360deg);
-    } */
 `
 const GameButton = styled.button`
- 
+  padding: 10px;
   border-radius: 50px ;
   background: hsl(244, 38%, 16%);
   color: hsla(0, 0%, 100%, 0.75);
@@ -294,7 +284,7 @@ const GameButton = styled.button`
   }
 `
 const UserButton = styled.button`
- 
+  padding: 10px;
   border-radius: 10em;
   background: hsl(244, 38%, 16%);
   display: flex;
@@ -317,11 +307,11 @@ const UserButton = styled.button`
   }
 `
 const UserAlt = styled(BiUser)`
- 
+  
   color: #fff;
 `
 const ChatButton = styled.button`
- 
+  padding: 10px;
   border-radius: 10em;
   background: hsl(233, 47%, 13%);
   display: flex;
@@ -349,7 +339,7 @@ const ChatBubble = styled(MdChatBubble)`
 
 
 const StreamButton = styled.button`
-
+  padding: 10px;
   border-radius: 10em;
   background: hsl(233, 47%, 13%);
   display: flex;
@@ -375,7 +365,7 @@ const Stream = styled(MdVideoCameraBack)`
   /* color: #b3f716; */
 `
 const MusicButton = styled.button`
- 
+  padding: 10px;
   border-radius: 10em;
   background: hsl(233, 47%, 13%);
   display: flex;

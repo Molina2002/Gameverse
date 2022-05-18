@@ -6,7 +6,7 @@ import { BiUser } from "react-icons/bi";
 import { IoLogoGameControllerB } from "react-icons/io";
 import { keyframes } from 'styled-components';
 import { useHistory, Link } from 'react-router-dom';
-import {Text} from "@chakra-ui/react";
+import {Text,Button} from "@chakra-ui/react";
 function Sidebar() {
    const [user, setUser] = useState([]);
    const history = useHistory();
@@ -18,25 +18,19 @@ function Sidebar() {
   return (
     <div className='sidebar'>
         <div className="sidebar__top">
-             <Text fontSize="xl" >
-           
-  
-  <div class="fl">GameVerse</div>
-          
-        
-        </Text>
+           <a href="/dashboard"> <Text fontSize="xl" >
+           <div class="fl">GameVerse</div> 
+            </Text></a>
         </div>
         <div className="sidebar__icon__container">
           <div className="sidebar__icon">
-            <GameButton><GamepadAnimation size="35" /></GameButton>
-            <UserButton>
-              <UserAlt size="29"/>
-              </UserButton>
+          <Link to="/dashboard"> <GameButton><GamepadAnimation size="35" /></GameButton></Link>
+           
        <Link to="/chats"> <ChatButton><ChatBubble size='30'/></ChatButton></Link>
        
-            <SettingButton><Settings size='30'/></SettingButton>
-            <StreamButton><Stream size='30'/></StreamButton>
-            <MusicButton><Music size='30'/></MusicButton>
+        
+          <Link to="/vstream"><StreamButton><Stream size='30'/></StreamButton></Link>  
+           
           </div>
         </div>
     </div>
@@ -51,7 +45,7 @@ const GamepadAnimation = styled(IoLogoGameControllerB)`
     } */
 `
 const GameButton = styled.button`
- 
+  padding: 12px;
   border-radius: 50px ;
   background: hsl(244, 38%, 16%);
   color: hsla(0, 0%, 100%, 0.75);
@@ -79,7 +73,7 @@ const GameButton = styled.button`
   }
 `
 const UserButton = styled.button`
- 
+  padding: 12px;
   border-radius: 10em;
   background: hsl(244, 38%, 16%);
   display: flex;
@@ -106,7 +100,7 @@ const UserAlt = styled(BiUser)`
   color: #fff;
 `
 const ChatButton = styled.button`
- 
+  padding: 12px;
   border-radius: 10em;
   background: hsl(233, 47%, 13%);
   display: flex;
@@ -132,7 +126,7 @@ const ChatBubble = styled(MdChatBubble)`
   /* color: pink; */
 `
 const SettingButton = styled.button`
-  
+  padding: 12px;
   border-radius: 10em;
   background: hsl(233, 47%, 13%);
   display: flex;
@@ -158,7 +152,7 @@ const Settings = styled(MdSettings)`
   /* color: #ec1035; */
 `
 const StreamButton = styled.button`
-
+  padding: 12px;
   border-radius: 10em;
   background: hsl(233, 47%, 13%);
   display: flex;
@@ -184,7 +178,7 @@ const Stream = styled(MdVideoCameraBack)`
   /* color: #b3f716; */
 `
 const MusicButton = styled.button`
-
+  padding: 12px;
   border-radius: 10em;
   background: hsl(233, 47%, 13%);
   display: flex;

@@ -137,6 +137,7 @@ const GroupChatModal = ({ children }) => {
             fontFamily="Work sans"
             d="flex"
             justifyContent="center"
+            color="white"
           >
             Create Group Chat
           </ModalHeader>
@@ -147,6 +148,7 @@ const GroupChatModal = ({ children }) => {
                 placeholder="Chat Name"
                 mb={3}
                 onChange={(e) => setGroupChatName(e.target.value)}
+                  color="white"
               />
             </FormControl>
             <FormControl>
@@ -154,6 +156,7 @@ const GroupChatModal = ({ children }) => {
                 placeholder="Add Users eg: John, Piyush, Jane"
                 mb={1}
                 onChange={(e) => handleSearch(e.target.value)}
+                  color="white"
               />
             </FormControl>
             <Box w="100%" d="flex" flexWrap="wrap">
@@ -181,7 +184,9 @@ const GroupChatModal = ({ children }) => {
             )}
           </ModalBody>
           <ModalFooter>
-            <Button onClick={handleSubmit} colorScheme="blue">
+            <Button onClick={handleSubmit} 
+            colorScheme="linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);"
+            >
               Create Chat
             </Button>
           </ModalFooter>

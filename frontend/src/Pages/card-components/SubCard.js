@@ -1,80 +1,19 @@
 import React from 'react'
 import './SubCard.css'
-import styled from 'styled-components'
-import { IoLogoGameControllerB } from "react-icons/io";
-import chess from '../images/chess.jpg'
-import wordle from '../images/wordle.png'
-import twozerofoureight from '../images/2048.jpg'
-import { Link, useHistory } from 'react-router-dom';
+import Card from './Card';
+import {Link} from "react-router-dom"
 function SubCard() {
-    const history = useHistory();
+    // const navigate = useNavigate();
   return (
     <div className="outer__container">
       <section>
           <div className="container__1">
-              <div className="card">
-                  <div className="imgBx">
-                      <img src={chess}></img>
-                  </div>
-                  <div className="content__sub">
-                      <div className="contentBx">
-                          <h3>Someone Famouse<br/> <span>Creative Designer</span> </h3>
-                      </div>
-                      <ul className="sci">
-                          <li><a href="#"><GameButton><Gamepad size="35" /></GameButton></a></li>
-                      </ul>
-                  </div>
-              </div>
-              <div className="card">
-                  <div className="imgBx">
-                      <img src={twozerofoureight}></img>
-                  </div>
-                  <div className="content__sub">
-                      <div className="contentBx">
-                          <h3>Someone Famouse<br/> <span>Creative Designer</span> </h3>
-                      </div>
-                      <ul className="sci">
-                         <GameButton onClick={()=>history.push("/memogame")}><Gamepad size="35" /></GameButton>
-                    </ul>
-                  </div>
-              </div>
-              <div className="card">
-                  <div className="imgBx">
-                      <img src={wordle}></img>
-                  </div>
-                  <div className="content__sub">
-                      <div className="contentBx">
-                          <h3>Someone Famouse<br/> <span>Creative Designer</span> </h3>
-                      </div>
-                      <ul className="sci">
-                          <li><a href="#"><GameButton><Gamepad size="35" /></GameButton></a></li>
-                      </ul>
-                  </div>
-              </div>
+            <Link to="/tictac"> <Card heading="Tic-Tac-Toe" image='https://github.com/harsh021102/images-for-project/blob/main/tictactoe.jpg?raw=true'/></Link>
+            < Link to="/wordle"><Card heading="Wordle" image="https://github.com/harsh021102/images-for-project/blob/main/2048.jpg?raw=true"/></Link>
+            <Link to="/memory"> <Card heading="Memory-Game" image="https://github.com/harsh021102/images-for-project/blob/main/wordle-game.png?raw=true"/></Link>
           </div>
       </section>
     </div>
   )
 }
-const Gamepad = styled(IoLogoGameControllerB)`
-  /* color: hsla(0, 0%, 100%, 0.75); */
-  /* padding: 4px; */
-`
-const GameButton = styled.button`
-  /* padding: 12px; */
-  width: 100px;
-  height: 50px;
-  border-radius: 10px ;
-  background: hsl(244, 38%, 16%);
-  color: hsla(0, 0%, 100%, 0.75);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  &:hover{
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-    color: white;
-  }
-`
 export default SubCard
