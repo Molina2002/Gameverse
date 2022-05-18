@@ -172,7 +172,7 @@ const Signup = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
+            <Button h="1.75rem"  w="1.85rem" size="sm" colorScheme="linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);" onClick={handleClick}>
               {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
@@ -188,7 +188,7 @@ const Signup = () => {
             onChange={(e) => setConfirmpassword(e.target.value)}
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
+            <Button h="1.75rem" w="1.85rem" size="sm" onClick={handleClick} colorScheme="linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);">
               {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
