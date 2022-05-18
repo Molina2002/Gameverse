@@ -9,9 +9,9 @@ function CardContainer() {
     <Scrollbars autoHide>
       <div className='card__container'>
         <div className="card__container__heading">
-          <h2 style={{fontSize: '2em'}}>#Games</h2>
+          <h2 style={{fontSize: '2em', fontWeight: '800'}}>#Games</h2>
         </div>
-          {/* <MainCard/> */}
+          <MainCard/>
           <SubCard/>
           <SubCard2/>
         </div>

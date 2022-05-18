@@ -1,25 +1,21 @@
 import React from 'react'
 import {HStack} from "@chakra-ui/react";
 const derby = () => {
-    const divStyle={
-border: '1px solid black',
-height:'787px',
- overflow:' hidden',
-position:'relative',
-width: '450px',
-
-
+const divStyle={
+  height:'787px',
+  overflow:' hidden',
+  position:'relative',
+  width: '450px',
 }
 const ifm={
     height: '770px',
     position:'absolute',
-   
     width: '1450px',
 }
 const div2Style={
 border: 'solid black',
 height:'787px',
- overflow:' hidden',
+overflow:' hidden',
 position:'relative',
 width: '1400px',
 }
@@ -31,7 +27,7 @@ const ifm2={
 }
   return (
     <>
-<HStack spacing="0px">
+<HStack spacing="0px" style={{width:'100vw', backgroundColor: 'hsl(233, 47%, 13%)'}}>
       <div style={divStyle}>
       <iframe src="/vchat" style={ifm}></iframe>
     </div>

@@ -6,8 +6,8 @@ function MainCard() {
       <div class="card">
         <div class="text-section">
           <div class="content">
-            <div class="heading">Tic <span>Tac</span> Toe</div>
-            <p>Tic-tac-toe is played on a three-by-three grid by two players, who alternately place the marks X and O in one of the nine spaces in the grid.</p>
+            <div class="heading">Chess</div>
+            <p>Chess is an abstract strategy game and involves no hidden information. It is played on a square chessboard with 64 squares arranged in an eight-by-eight grid.</p>
           </div>
       </div>
         <div class="image-section image"></div>

@@ -3,7 +3,8 @@ import Sidebar from '../Sidebar'
 import { Box, HStack } from '@chakra-ui/react'
 const quiz = () => {
     const divStyle={
-border: '1px solid black',
+// border: '1px solid black',
+borderRadius: '10px',
 height:'742px',
  overflow:' hidden',
 position:'relative',
@@ -19,7 +20,7 @@ const ifm={
     width: '1450px',
 }
   return (
-      <div className="edu1">
+      <div className="edu1" style={{width:'100vw', backgroundColor: 'hsl(233, 47%, 13%)'}}>
         <HStack  spacing='0px'>
         <Sidebar/>
         

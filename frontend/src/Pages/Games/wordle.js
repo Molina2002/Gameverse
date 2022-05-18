@@ -4,7 +4,7 @@ import Sidebar from '../Sidebar'
 import { Box, HStack } from '@chakra-ui/react'
 const wordle = () => {
          const divStyle={
-border: '1px solid black',
+// border: '1px solid black',
 height:'792px',
  overflow:' hidden',
 position:'relative',
@@ -19,7 +19,7 @@ const ifm={
     width: '1500px',
 }
   return (
-   <div className="edu1">
+   <div className="edu1" style={{width:'100vw', backgroundColor: '#121212'}}>
         <HStack  spacing='0px'>
         <Sidebar/>
         
