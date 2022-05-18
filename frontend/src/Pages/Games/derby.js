@@ -6,6 +6,7 @@ const divStyle={
   overflow:' hidden',
   position:'relative',
   width: '450px',
+  
 }
 const ifm={
     height: '770px',
